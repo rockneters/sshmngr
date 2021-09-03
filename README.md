@@ -37,6 +37,7 @@ I hope you will subscribe & like Thank you very much.🤗🧿
 
 apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/sbatrow/DARKSSH-MANAGER/master/Plus; chmod 777 Plus; ./Plus
 
+```
 -------------------------------------------------------------------------------
 
 <img align="right" src="https://github.com/sbatrow/DARKSSH-MANAGER/blob/main/image/ssh bot.jpg" width='300'/>
