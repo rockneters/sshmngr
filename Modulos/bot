@@ -22,14 +22,11 @@ ShellBot.username
 fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
-	env_msg="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>----------ROCKNET STORE | VPN----------</b>\n"
-	env_msg+="<b>  #        ⚡️⚡️ Oyis ⚡️⚡      </b>\n"
-	env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>/Telegram- @RocknetStore </b>\n"
-	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
+	env_msg="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="<b>•••••• ROCKNET STORE | VPN •••••••</b>\n"
+	env_msg+="=====================================\n"
+        env_msg+="<b>Info Telegram : @RocknetStore </b>\n"
+	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
             --parse_mode html
@@ -42,28 +39,22 @@ fun_menu() {
     }
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
-        env_msg="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>----------ROCKNET STORE | VPN----------</b>\n"
-	env_msg+="<b>  #        ⚡️⚡️ Oyis ⚡️⚡      </b>\n"
-	env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>/Telegram- @RocknetStore </b>\n"
-	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
+        env_msg="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="<b>•••••• ROCKNET STORE | VPN •••••••</b>\n"
+	env_msg+="=====================================\n"
+        env_msg+="<b>Info Telegram : @RocknetStore </b>\n"
+	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━\n
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard2" \
             --parse_mode html
         return 0
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
-        env_msg="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>----------ROCKNET STORE | VPN----------</b>\n"
-	env_msg+="<b>  #        ⚡️⚡️ Oyis ⚡️⚡      </b>\n"
-	env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>/Telegram- @RocknetStore </b>\n"
-	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="⚠️ <i>SELECT AN OPTION BELOW!</i>\n\n"
+        env_msg="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="<b>•••••• ROCKNET STORE | VPN •••••••</b>\n"
+	env_msg+="=====================================\n"
+        env_msg+="<b>Info Telegram : @RocknetStore </b>\n"
+	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard3" \
             --parse_mode html
@@ -85,36 +76,34 @@ fun_ajuda() {
     }
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
-        env_msg="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>----------ROCKNET STORE | VPN----------</b>\n"
-	env_msg+="<b>  #        ⚡️⚡️ Oyis ⚡️⚡      </b>\n"
-	env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>/Telegram- @RocknetStore </b>\n"
-	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="⚠️ <i>Available Commands</i>\n\n"
+        env_msg="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="<b>•••••• ROCKNET STORE | VPN •••••••</b>\n"
+	env_msg+="=====================================\n"
+        env_msg+="<b>Info Telegram : @RocknetStore </b>\n"
+	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="⚠️ Available Commands ⚠️\n"
         env_msg+="[<b>01</b>] /menu = Displays menu\n"
         env_msg+="[<b>02</b>] /info = Displays information\n"
         env_msg+="[<b>03</b>] /help = Option information\n\n"
-        env_msg+="⚠️ <i>Available Options</i>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>TO REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Displays online users\n\n"
-        env_msg+="• <u>INFO VPS</u> = Server information\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> =Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change ssh data\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>BACKUP</u> = Creates ssh backup and resellers\n\n"
-        env_msg+="• <u>OTIMIZAR</u> = Clear the cache - ram\n\n"
-        env_msg+="• <u>SPEEDTESTE</u> = connection test\n\n"
-        env_msg+="• <u>FILES</u> = Hosts Files\n\n"
-        env_msg+="• <u>RESELLERS</u> = Manage Resellers\n\n"
-        env_msg+="• <u>AUTOBACKUP</u> = on / off automatic backup\n\n"
-        env_msg+="• <u>REPORT</u> = Reseller Information\n\n"
-        env_msg+="• <u>HELP</u> = Option information\n\n"
+        env_msg+="⚠️ Available Options ⚠️\n"
+        env_msg+="• <u>CREATE USER</u> = Create ssh user\n"
+        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n"
+        env_msg+="• <u>TO REMOVE</u> = Remove ssh user\n"
+        env_msg+="• <u>USER INFO</u> = User information\n"
+        env_msg+="• <u>ONLINE USERS</u> = Displays online users\n"
+        env_msg+="• <u>INFO VPS</u> = Server information\n"
+        env_msg+="• <u>CHANGE PASSWORD</u> =Change ssh password\n"
+        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n"
+        env_msg+="• <u>CHANGE DATE</u> = Change ssh data\n"
+        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n"
+        env_msg+="• <u>BACKUP</u> = Creates ssh backup and resellers\n"
+        env_msg+="• <u>OTIMIZAR</u> = Clear the cache - ram\n"
+        env_msg+="• <u>SPEEDTESTE</u> = connection test\n"
+        env_msg+="• <u>FILES</u> = Hosts Files\n"
+        env_msg+="• <u>RESELLERS</u> = Manage Resellers\n"
+        env_msg+="• <u>AUTOBACKUP</u> = on / off automatic backup\n"
+        env_msg+="• <u>REPORT</u> = Reseller Information\n"
+        env_msg+="• <u>HELP</u> = Option information\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -125,58 +114,54 @@ fun_ajuda() {
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
-        env_msg="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>----------ROCKNET STORE | VPN----------</b>\n"
-	env_msg+="<b>  #        ⚡️⚡️ Oyis ⚡️⚡      </b>\n"
-	env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>/Telegram- @RocknetStore </b>\n"
-	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="⚠️ <i>Available Commands</i>\n\n"
-        env_msg+="[<b>01</b>] /menu = Displays menu\n"
-        env_msg+="[<b>02</b>] /info = Displays information\n"
-        env_msg+="[<b>03</b>] /help = Option information\n\n"
-        env_msg+="⚠️ <i>Available Options</i>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>TO REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Displays online users\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> =Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change ssh data\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>RESELLERS</u> = Manage Resellers\n\n"
-        env_msg+="• <u>REPORT</u> = Reseller Information\n\n"
-        env_msg+="• <u>HELP</u> = Option information\n\n"
+        env_msg="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="<b>•••••• ROCKNET STORE | VPN •••••••</b>\n"
+	env_msg+="=====================================\n"
+        env_msg+="<b>Info Telegram : @RocknetStore </b>\n"
+	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="⚠️ Available Commands ⚠️\n"
+        env_msg+="/menu = Displays menu\n"
+        env_msg+="/info = Displays information\n"
+        env_msg+="/help = Option information\n\n"
+        env_msg+="⚠️ Available Options ⚠️\n"
+        env_msg+="• <u>CREATE USER</u> = Create ssh user\n"
+        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n"
+        env_msg+="• <u>TO REMOVE</u> = Remove ssh user\n"
+        env_msg+="• <u>USER INFO</u> = User information\n"
+        env_msg+="• <u>ONLINE USERS</u> = Displays online users\n"
+        env_msg+="• <u>CHANGE PASSWORD</u> =Change ssh password\n"
+        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n"
+        env_msg+="• <u>CHANGE DATE</u> = Change ssh data\n"
+        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n"
+        env_msg+="• <u>RESELLERS</u> = Manage Resellers\n"
+        env_msg+="• <u>REPORT</u> = Reseller Information\n"
+        env_msg+="• <u>HELP</u> = Option information\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
-        env_msg="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>----------ROCKNET STORE | VPN----------</b>\n"
-	env_msg+="<b>  #        ⚡️⚡️ Oyis ⚡️⚡      </b>\n"
-	env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>/Telegram- @RocknetStore </b>\n"
-	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="⚠️ <i>Available Commands</i>\n\n"
-        env_msg+="[<b>01</b>] /menu = Displays menu\n"
-        env_msg+="[<b>02</b>] /info = Displays information\n"
-        env_msg+="[<b>03</b>] /ajuda = Option information\n\n"
-        env_msg+="⚠️ <i>Available Options</i>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>TO REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Displays online users\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> =Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change ssh data\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>HELP</u> = Option information\n\n"
+        env_msg="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="<b>•••••• ROCKNET STORE | VPN •••••••</b>\n"
+	env_msg+="=====================================\n"
+        env_msg+="<b>Info Telegram : @RocknetStore </b>\n"
+	env_msg+="━━━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg+="⚠️ Available Commands ⚠️\n"
+        env_msg+="/menu = Displays menu\n"
+        env_msg+="/info = Displays information\n"
+        env_msg+="/help = Option information\n\n"
+        env_msg+="⚠️ Available Options ⚠️\n"
+        env_msg+="• <u>CREATE USER</u> = Create ssh user\n"
+        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n"
+        env_msg+="• <u>TO REMOVE</u> = Remove ssh user\n"
+        env_msg+="• <u>USER INFO</u> = User information\n"
+        env_msg+="• <u>ONLINE USERS</u> = Displays online users\n"
+        env_msg+="• <u>CHANGE PASSWORD</u> =Change ssh password\n"
+        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n"
+        env_msg+="• <u>CHANGE DATE</u> = Change ssh data\n"
+        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n"
+        env_msg+="• <u>HELP</u> = Option information\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -463,9 +448,9 @@ ver_users() {
     if [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         arq_info=/tmp/$(echo $RANDOM)
         local info_users
-        info_users='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n'
+        info_users='============================\n'
         info_users+='<b>USER INFORMATION</b>\n'
-        info_users+='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n'
+        info_users+='============================\n\n'
         info_users+='⚠️ Displays in the format below:\n\n'
         info_users+='<code>USER PASSWORD DATE LIMIT</code>\n'
         ShellBot.sendMessage --chat_id $id_admin \
@@ -515,9 +500,9 @@ ver_users() {
         }
         arq_info=/tmp/$(echo $RANDOM)
         local info_users
-        info_users='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n'
+        info_users='============================\n'
         info_users+='<b>USER INFORMATION</b>\n'
-        info_users+='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n'
+        info_users+='============================\n\n'
         info_users+='⚠️ Displays in the format below:\n\n'
         info_users+='<code>USER PASSWORD DATE LIMIT</code>\n'
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
@@ -596,9 +581,9 @@ monitor_ssh() {
         database="/root/usuarios.db"
         cad_onli=/tmp/$(echo $RANDOM)
         local info_on
-        info_on='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n'
+        info_on='============================\n'
         info_on+='<b>ONLINES USERS MONITOR</b>\n'
-        info_on+='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n'
+        info_on+='============================\n\n'
         info_on+='⚠️ Displays in the format below:\n\n'
         info_on+='<code>ONLIN USERE/TIME LIMIT\n</code>'
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
