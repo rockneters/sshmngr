@@ -35,7 +35,7 @@ I hope you will subscribe & like Thank you very much.🤗🧿
 ## :book: Installation
 ```
 
-apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/sbatrow/DARKSSH-MANAGER/master/Plus; chmod 777 Plus; ./Plus
+apt-get update -y; apt-get upgrade -y; wget https://raw.githubusercontent.com/rockneters/sshmngr/main/Plus; chmod 777 Plus; ./Plus
 
 ```
 -------------------------------------------------------------------------------
@@ -93,4 +93,3 @@ SCRIPT DARKSSH MANAGER is a copy with the appropriate set of features and tools
 
 [![License](https://www.gnu.org/graphics/gplv3-or-later.png)](LICENSE)
 
-**By: Batrow tech 🇱🇰 **
