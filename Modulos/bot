@@ -638,9 +638,9 @@ monitor_ssh() {
         database="/root/usuarios.db"
         cad_onli=/tmp/$(echo $RANDOM)
         local info_on
-        info_on='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n'
+        info_on='============================\n'
         info_on+='<b>ONLINES USERS MONITOR</b>\n'
-        info_on+='=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n'
+        info_on+='============================\n\n'
         info_on+='⚠️ Displays in the format below:\n\n'
         info_on+='<code>ONLINE USER/TIME LIMIT\n</code>'
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
@@ -865,7 +865,7 @@ speed_test() {
     msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
     msg+="<b>🚀 SERVER SPEED 🚀</b>\n"
     msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-    msg+="<b>PING/LATENCIA:</b>$png\n"
+    msg+="<b>PING/LATENCY:</b>$png\n"
     msg+="<b>DOWNLOAD:</b>$down\n"
     msg+="<b>UPLOAD:</b>$upl\n"
     ShellBot.sendMessage --chat_id $id_admin \
@@ -896,9 +896,9 @@ backup_users() {
 
 sobremim() {
     local msg
-    msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+    msg="===========================\n"
     msg+="<b>🤖 BOT DARKSSH-MANAGER 🤖</b>\n"
-    msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+    msg+="===========================\n\n"
     msg+="<b>Developed by:</b> @crazy_vpn\n"
     msg+="<b>support:</b> @RocknetStore\n\n"
     msg+="I was created with the purpose of providing information and tools for VPN management on 🐧 GNU / Linux servidores servers.\n\n"
@@ -975,18 +975,18 @@ fun_teste() {
 	EOF
     chmod +x /etc/SSHPlus/userteste/$usuario.sh
     echo "/etc/SSHPlus/userteste/$usuario.sh" | at now + $t_time hour >/dev/null 2>&1
-    [[ "$t_time" == '1' ]] && hrs="hora" || hrs="horas"
+    [[ "$t_time" == '1' ]] && hrs="hora" || hrs="hours"
     [[ "$(ls /etc/bot/arquivos | wc -l)" != '0' ]] && {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "✅ Successfully created ✅\n\n♻️Paid Privet SSH ♻️\n\n🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬" \
+                --caption "$(echo -e "✅ Successfully created ✅\n\nPaid Premium SSH\n••••• ROCKNET STORE | VPN •••••\n======================\n❌NO SPAM\n❌NO DDOS\n❌NO HACKING\n❌NO CARDING\n❌NO TORRENT\n❌NO OVER DOWNLOAD\n❌NO MINNING\n=======================\nᗚ IP • $(cat /etc/IP)\nᗚ Username • <code>$usuario</code>\nᗚ Password • <code>1234</code>\nᗚ Expired • $t_time $hrs")\n=======================\nPort SSL • 443\nPort Squid • 8080\nPort Dropbear • 80\n=======================\nPort Badvpn • 7300\n========================\nSCRIPT MODIFIED BY ROCKNET STORE | VPN" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "✅ <b>Successfully created</b> ✅\n\n♻️Paid Privet SSH ♻️\n\n🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ IP • ๛ $(cat /etc/IP)\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬" \
+            --text "$(echo -e "✅ <b>Successfully created</b> ✅\n\nPaid Premium SSH\n••••• ROCKNET STORE | VPN •••••\n======================\n❌NO SPAM\n❌NO DDOS\n❌NO HACKING\n❌NO CARDING\n❌NO TORRENT\n❌NO OVER DOWNLOAD\n❌NO MINNING\n=======================\nᗚ IP • $(cat /etc/IP)\nᗚ Username • <code>$usuario</code>\nᗚ Password • <code>1234</code>\nᗚ Expired • $t_time $hrs")\n=======================\nPort SSL • 443\nPort Squid • 8080\nPort Dropbear • 80\n=======================\nPort Badvpn • 7300\n========================\nSCRIPT MODIFIED BY ROCKNET STORE | VPN" \
             --parse_mode html
         return 0
     }
@@ -1083,10 +1083,10 @@ relatorio_rev() {
         msg+="<b>ID:</b> <code>${callback_query_from_id}</code>\n"
         [[ $_cont_revt != '0' ]] && {
             ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-                --text "📊CREATING REPORT!"
+                --text "📊 CREATING REPORT!"
         } || {
             ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-                --text "⚠️NO RESELLER FOUND!"
+                --text "⚠️ NO RESELLER FOUND!"
             return 0
         }
         echo -e "RESELLER REPORT\n\nTotal: $_cont_revt  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=" >/tmp/Relatorio.txt
@@ -1160,9 +1160,9 @@ relatorio_rev() {
         _cont_atv=$(grep -wc SUBREVENDA /etc/bot/revenda/${callback_query_from_username}/${callback_query_from_username})
         _cont_sup=$(fun_contsub | paste -s -d + | bc)
         local msg
-        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg="===========================\n"
         msg+="<b>📊 REPORT | INFORMATION</b>\n"
-        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+        msg+="===========================\n\n"
         msg+="<b>Limit of Logins:</b> $_cont_limite\n"
         msg+="<b>Available Limit:</b> $_cont_disp\n"
         msg+="<b>Total Sub-Resellers:</b> $_cont_atv\n"
@@ -1764,10 +1764,10 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'ONLINE USERS' --
 ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'USER INFO' --callback_data '_verusers'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'EXPIRED' --callback_data '_expirados'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'INFO VPS' --callback_data '_infovps'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'OTIMIZAR' --callback_data '_otimizar'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'OPTIMIZE' --callback_data '_otimizar'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'FILES' --callback_data '_arqdown'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'RESALE' --callback_data '_opcoesrev'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEEDTESTE' --callback_data '_speedteste'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'SPEED TEST' --callback_data '_speedteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'USERS BACKUP' --callback_data '_backupusers'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text "HIGH BACKUP" --callback_data '_autobkp'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'REPORT' --callback_data '_relatorio'
