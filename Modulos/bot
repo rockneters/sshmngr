@@ -983,13 +983,13 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "✅ Successfully created ✅\n\n♻️Paid Privet SSH ♻️\n\n🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬" \
+                --caption "$(echo -e "<b>✅ SUCCESSFULLY CREATED ✅</b>\nROCKNET VPN ACCOUNT PREMIUM\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MULTILOGIN\n=======================\nᗚ Username • <code>$usuario</code>\nᗚ Password • <code>1234</code>\nᗚ Expire • $t_time $hrs") ⏳\n==================\nᗚ Port SSL •  443\nᗚ Squid  •  8080\nᗚ Dropbear • 80\n==================\nᗚ Badvpn • 7300\n==================\n›SCRIPTS ═◇ ROCKNET STORE ◇═" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "✅ <b>Successfully created</b> ✅\n\n♻️Paid Privet SSH ♻️\n\n🔥⚡️⚡️ Sithum Batrow 🇱🇰 ⚡️⚡️🔥\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MULTILOGIN\n=======================\n\n\nᗚ IP • ๛ $(cat /etc/IP)\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n\n⏳ ᗚ Expire • $t_time $hrs")\n࿂ SSH •  22\n࿂ SSL •  443\n࿂ Squid  •  8080\n࿂ Dropbear •  80\n[-] ═───────◇───────═\n࿂ Badvpn •  7300\n [-] ═───────◇───────═\n›☬[•] SCRIPTS ═◇ DARKSSH ◇═ [•]☬" \
+            --text "$(echo -e "<b>✅ SUCCESSFULLY CREATED ✅</b>\nROCKNET VPN ACCOUNT PREMIUM\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MULTILOGIN\n=======================\nᗚ IP • $(cat /etc/IP)\nᗚ Username • <code>$usuario</code>\nᗚ Password • <code>1234</code>\nᗚ Expire • $t_time $hrs") ⏳\n==================\nᗚ Port SSL •  443\nᗚ Squid  •  8080\nᗚ Dropbear • 80\n==================\nᗚ Badvpn • 7300\n==================\n›SCRIPTS ═◇ ROCKNET STORE ◇═" \
             --parse_mode html
         return 0
     }
