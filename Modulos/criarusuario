@@ -277,11 +277,6 @@ echo -ne "\033[1;32mConnection limit:\033[1;37m ";read sshlimiter
 	echo -e "\n${cor1}Number of simultaneous connections must be greater than zero!${scor}\n"
 	exit 1	
 }
-echo -ne "\033[1;32mBaner-Name:\033[1;37m ";read banername
-[[ -z $banername ]] && {
-	echo -e "\n${cor1}Empty or invalid banername!${scor}\n"
-	
-}	
 
 final=$(date "+%Y-%m-%d" -d "+$dias days")
 gui=$(date "+%d/%m/%Y" -d "+$dias days")
@@ -320,7 +315,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32m=❌NO TORRENT   "
                 echo -e "\033[1;32m=❌NO OVER DOWNLOAD"
                 echo -e "\033[1;32m=❌NO MINNING "
-                C
+                echo -e "\033[1;32m======================"
 		echo -e "\n\033[1;32mᗚ IP • \033[1;37m$IP"
 		echo -e "\033[1;32mᗚ Username • \033[1;37m$username"
 		echo -e "\033[1;32mᗚ Password • \033[1;37m$password"
@@ -332,7 +327,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32mᗚ Squid  • 8080"
                 echo -e "\033[1;32mᗚ Dropbear • 80"
                 echo -e "\033[1;32m======================="
-                echo -e "\033[1;32mSCRIPTS ═◇ROCKNET STORE VPN◇═"
+                echo -e "\033[1;32mScript by ROCKNET STORE"
 		sleep 1
 		function aguarde() {
 			helice() {
@@ -379,7 +374,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32m=❌NO TORRENT   "
                 echo -e "\033[1;32m=❌NO OVER DOWNLOAD"
                 echo -e "\033[1;32m=❌NO MINNING "
-                C
+                echo -e "\033[1;32m======================"
 		echo -e "\n\033[1;32mᗚ IP • \033[1;37m$IP"
 		echo -e "\033[1;32mᗚ Username • \033[1;37m$username"
 		echo -e "\033[1;32mᗚ Password • \033[1;37m$password"
@@ -391,7 +386,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32mᗚ Squid  • 8080"
                 echo -e "\033[1;32mᗚ Dropbear • 80"
                 echo -e "\033[1;32m======================="
-                echo -e "\033[1;32mSCRIPTS ═◇ROCKNET STORE VPN◇═"		
+                echo -e "\033[1;32mScript by ROCKNET STORE"		
 	}
 } || {
 	clear
@@ -407,7 +402,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32m=❌NO TORRENT   "
                 echo -e "\033[1;32m=❌NO OVER DOWNLOAD"
                 echo -e "\033[1;32m=❌NO MINNING "
-                C
+                echo -e "\033[1;32m======================"
 		echo -e "\n\033[1;32mᗚ IP • \033[1;37m$IP"
 		echo -e "\033[1;32mᗚ Username • \033[1;37m$username"
 		echo -e "\033[1;32mᗚ Password • \033[1;37m$password"
@@ -419,5 +414,5 @@ echo "$username $sshlimiter" >>/root/usuarios.db
                 echo -e "\033[1;32mᗚ Squid  • 8080"
                 echo -e "\033[1;32mᗚ Dropbear • 80"
                 echo -e "\033[1;32m======================="
-                echo -e "\033[1;32mSCRIPTS ═◇ROCKNET STORE VPN◇═"	
+                echo -e "\033[1;32mScript by ROCKNET STORE"	
 }
