@@ -815,7 +815,7 @@ fun_download() {
     echo $_file2
     ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
         --document "@/etc/bot/arquivos/$_file" \
-        --caption "$(echo -e "✅ SUCCESSFULLY CREATED ✅\n♻️ ACCOUNT SSH PREMIUM ♻️\n======================\n=❌NO SPAM\n=❌NO DDOS\n=+❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\n\nᗚ Username • ๛ <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\nᗚ Password • ๛ <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\nᗚ Limit • $(awk -F " " '/Limite/ {print $2}' $_file2)\nᗚ Expire • $(awk -F " " '/Validade/ {print $2}' $_file2)\nSquid  •  8080\nᗚ Dropbear •  80\n=====================\nᗚ Badvpn •  7300\n =====================\n═◇ SCRIPT BY ROCKNET STORE VPN ◇═")" \
+        --caption "$(echo -e "✅ SUCCESSFULLY CREATED ✅\n\nACCOUNT SSH PREMIUM\n======================\nROCKNET STORE | VPN\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\nᗚ Username • <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\nᗚ Password • <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\nᗚ Limit • $(awk -F " " '/Limite/ {print $2}' $_file2)\nᗚ Expire • $(awk -F " " '/Validade/ {print $2}' $_file2)\n=====================\nᗚ Port SSL • 443\nᗚ Badvpn • 7300\n =====================\nScript by. ROCKNET STORE VPN")" \
         --parse_mode html
     [[ -e "/root/$(awk -F " " '/Nome/ {print $2}' $_file2).ovpn" ]] && {
         ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
@@ -992,13 +992,13 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "✅ Successfully created ✅\n♻️ ACCOUNT SSH PREMIUM ♻️\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\n\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n⏳ ᗚ Expire • $t_time $hrs")\nSquid  •  8080\nᗚ Dropbear •  80\n=====================\nᗚ Badvpn •  7300\n =====================\n═◇ SCRIPT BY ROCKNET STORE VPN ◇═" \
+                --caption "$(echo -e "✅ Successfully created ✅\n\nACCOUNT SSH PREMIUM\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\nᗚ Username • <code>$usuario</code>\nᗚ Password • <code>1234</code>\nᗚ Expired • $t_time $hrs")\n=====================\nᗚ Port SSL • 443\nᗚ Badvpn • 7300\n =====================\nScript by ROCKNET STORE VPN" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "✅ <b>Successfully created</b> ✅\n♻️ ACCOUNT SSH PREMIUM ♻️\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\n\nᗚ IP • ๛ $(cat /etc/IP)\nᗚ Username • ๛ <code>$usuario</code>\nᗚ Password • ๛ <code>1234</code>\n⏳ ᗚ Expire • $t_time $hrs")\nSquid  •  8080\nᗚ Dropbear •  80\n=====================\nᗚ Badvpn •  7300\n =====================\n═◇ SCRIPT BY ROCKNET STORE VPN ◇═" \
+            --text "$(echo -e "✅ <b>Successfully created</b> ✅\n\nACCOUNT SSH PREMIUM\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\nᗚ IP • $(cat /etc/IP)\nᗚ Username • <code>$usuario</code>\nᗚ Password • <code>1234</code>\nᗚ Expired • $t_time $hrs")\nᗚ Port SSL • 443\nᗚ Badvpn • 7300\n =====================\nScript by ROCKNET STORE VPN" \
             --parse_mode html
         return 0
     }
@@ -2024,7 +2024,7 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>✅ SUCCESSFULLY CREATED ✅</b>\n♻️ ACCOUNT SSH PREMIUM ♻️\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\n\nᗚ IP • ๛ $(cat /etc/IP)\nᗚ Username • ๛ <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\nᗚ Password • ๛ <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\nᗚ Limit • $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\nᗚ Expire • $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\nSquid  •  8080\nᗚ Dropbear •  80\n=====================\nᗚ Badvpn •  7300\n =====================\n═◇ SCRIPT BY ROCKNET STORE VPN ◇═" \
+                            --text "<b>✅ SUCCESSFULLY CREATED ✅</b>\n\nACCOUNT SSH PREMIUM\n======================\n=❌NO SPAM\n=❌NO DDOS\n=❌NO HACKING\n=❌NO CARDING\n=❌NO TORRENT\n=❌NO OVER DOWNLOAD\n=❌NO MINNING\n=======================\nᗚ IP • $(cat /etc/IP)\nᗚ Username • <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\nᗚ Password • <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\nᗚ Limit • $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\nᗚ Expired • $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\nSquid  •  8080\nᗚ Dropbear •  80\n=====================\nᗚ Badvpn •  7300\n =====================\n═◇ SCRIPT BY ROCKNET STORE VPN ◇═" \
                             --parse_mode html
                         break
                     }
