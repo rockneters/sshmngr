@@ -69,7 +69,7 @@ wget -O /bin/menuV1 https://raw.githubusercontent.com/rockneters/sshmngr/master/
 wget -O /bin/menuV2 https://raw.githubusercontent.com/rockneters/sshmngr/master/Install/menuV2 > /dev/null 2>&1; chmod +x /bin/menuV2
 wget -O /bin/menuV3 https://raw.githubusercontent.com/rockneters/sshmngr/master/Install/menuV3 > /dev/null 2>&1; chmod +x /bin/menuV3
 wget -O /bin/menuV4 https://raw.githubusercontent.com/rockneters/sshmngr/master/Install/menuV4 > /dev/null 2>&1; chmod +x /bin/menuV4
-rm versao* > /dev/null 2>&1; wget https://raw.githubusercontent.com/rockneters/sshmngr/main/versao > /dev/null 2>&1
+rm versao* > /dev/null 2>&1; wget https://raw.githubusercontent.com/rockneters/sshmngr/master/versao > /dev/null 2>&1
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mKEY VALID!\033[1;32m"
 sleep 1s
@@ -124,16 +124,16 @@ fun_bar 'inst_pct'
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
 clear
 echo ""
-echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINISHING \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo -e "\033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINISHING \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "      \033[1;33mCOMPLETING FUNCTIONS AND SETTINGS! \033[0m"
+echo -e "\033[1;33mCOMPLETING FUNCTIONS AND SETTINGS! \033[0m"
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
 clear
 echo ""
 cd $HOME
-echo -e "        \033[1;33m • \033[1;32mINSTALLATION COMPLETED\033[1;33m • \033[0m"
+echo -e "\033[1;33m • \033[1;32mINSTALLATION COMPLETED\033[1;33m • \033[0m"
 echo ""
-echo -e "\033[1;31m \033[1;33mMAIN COMMAND: \033[1;32mMenu\033[0m"
+echo -e "\033[1;31m \033[1;33mMAIN COMMAND: \033[1;32mmenu\033[0m"
 echo -e "\033[1;33m MORE INFORMATION : TELEGRAM @RocknetStore\033[0m"
 rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
