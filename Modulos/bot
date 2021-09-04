@@ -2304,7 +2304,7 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     echo "Nome: ${message_text[$id]}" >$CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Inform his user [Ex: @sibatrow]:' \
+                        --text 'Inform his user [Ex: @RocknetStore]:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
                 'Inform his user [Ex: @sibatrow]:')
