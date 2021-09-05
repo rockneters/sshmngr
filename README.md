@@ -13,7 +13,7 @@
 ## :book: Installation
 ```
 
-wget https://raw.githubusercontent.com/rockneters/sshmngr/master/Plus; chmod 777 Plus; ./Plus
+wget https://raw.githubusercontent.com/rockneters/sshmngr/main/Plus; chmod 777 Plus; ./Plus
 
 ```
 
