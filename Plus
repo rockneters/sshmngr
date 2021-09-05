@@ -69,10 +69,8 @@ rm versao* > /dev/null 2>&1; wget https://raw.githubusercontent.com/rockneters/s
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mKEY VALID!\033[1;32m"
 sleep 10s
-echo ""
 [[ -f "$HOME/usuarios.db" ]] && {
-    #clear
-echo ""
+clear
     echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
     echo ""
 	echo -e "                 \033[1;33m• \033[1;31mAttention \033[1;33m• \033[0m"
