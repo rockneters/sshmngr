@@ -46,15 +46,9 @@ echo -e "\033[1;31m════════════════════�
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "JALINGKUT TRIX AUTOSCRIPT VPN" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
-echo -e "             \033[1;31mATTENTION! \033[1;33mTHIS SCRIPT WILL!\033[0m"
-echo ""
-echo -e "\033[1;31m• \033[1;33mInstalling a Toolkit\033[0m" 
-echo -e "\033[1;33m For managing networks, systems and users\033[0m"
-echo ""
-echo -e "\033[1;32m• \033[1;32mTIP! \033[1;33mULTILIZE THE DARK THEME IN YOUR TERMINAL TO\033[0m"
-echo -e "\033[1;33m  A BETTER EXPERIENCE AND VISUALIZATION OF THE SAME!\033[0m"
-echo ""
-echo -e "\033[1;31m≠×≠×≠×≠×≠×≠×≠×≠×[\033[1;33m • \033[1;32m By  Jalingkut trix \033[1;33m •\033[1;31m ]≠×≠×≠×≠×≠×≠×≠×≠×\033[0m"
+echo -e "\033[1;31m• \033[1;33mHAI BRO, ANDA AKAN MENGINSTALL AUTOASCRIPT VPN\033[0m" 
+echo -e "\033[1;33mAPABILA ADA KENDALA DALAM PROSES INSTALL, HUBUNGI KAMI\033[0m"
+echo -e "\033[1;31m==========[\033[1;33m • \033[1;32mCONTACT PERSON : TELEGRAM @RocknetStore\033[1;33m •\033[1;31m ]==========\033[0m"
 echo ""
 #-----------------------------------------------------------------------------------------------------------------
 read -p "$(echo -e "\033[1;36mDO YOU WISH TO CONTINUE \033[1;31m? \033[1;33m[S/N]:\033[1;37m ")" -e -i s resp
@@ -76,7 +70,7 @@ echo -e "\n\033[1;32mKEY VALID!\033[1;32m"
 sleep 1s
 echo ""
 [[ -f "$HOME/usuarios.db" ]] && {
-    clear
+#clear
     echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
     echo ""
 	echo -e "                 \033[1;33m• \033[1;31mAttention \033[1;33m• \033[0m"
@@ -94,7 +88,7 @@ echo ""
 	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
 }
 [[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
-clear
+#clear
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " WAIT FOR INSTALLATION" ; tput sgr0
 echo ""
 echo ""
@@ -108,7 +102,7 @@ fun_attlist () {
 	echo "crz: $(date)" > /usr/share/.plus/.plus
 }
 fun_bar 'fun_attlist'
-clear
+#clear
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALLING PACKAGES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
@@ -123,14 +117,14 @@ pip install speedtest-cli
 }
 fun_bar 'inst_pct'
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
-clear
+#clear
 echo ""
 echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINISHING \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
 echo -e "      \033[1;33mCOMPLETING FUNCTIONS AND SETTINGS! \033[0m"
 echo ""
 fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
-clear
+#clear
 echo ""
 cd $HOME
 echo -e "        \033[1;33m • \033[1;32mINSTALLATION COMPLETED\033[1;33m • \033[0m"
